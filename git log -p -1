@@ -1,0 +1,1471 @@
+[33mcommit 0656bafae14e109c67c4615c20480b22e5a62535[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: thiago <thiagosilva_guitar@hotmail.com>
+Date:   Fri Jan 17 09:27:02 2020 -0300
+
+    Projeto Site Google Glass
+
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/.DS_Store b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2ab4059[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/Untitled-1.py b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/Untitled-1.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/.DS_Store b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5008ddf[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/estilo.css b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/estilo.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a6ab54e[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/estilo.css[m	
+[36m@@ -0,0 +1,220 @@[m
+[32m+[m[32m@charset "utf-8";[m
+[32m+[m
+[32m+[m[32m@font-face {[m
+[32m+[m[32m  font-family: "fontlogo";[m
+[32m+[m[32m  src: url("../_fonts/bubblegum-sans-regular.otf");[m
+[32m+[m[32m}[m
+[32m+[m[32mp {[m
+[32m+[m[32m  text-align: justify;[m
+[32m+[m[32m  text-indent: 50px;[m
+[32m+[m[32m}[m
+[32m+[m[32ma {[m
+[32m+[m[32m  color: rgb(155, 147, 147);[m
+[32m+[m[32m  text-decoration: none;[m
+[32m+[m[32m}[m
+[32m+[m[32ma:hover {[m
+[32m+[m[32m  text-decoration: underline;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Fundo do site*/[m
+[32m+[m[32mbody {[m
+[32m+[m[32m  font-family: Arial, sans-serif;[m
+[32m+[m[32m  background-color: #dddddd;[m
+[32m+[m[32m  color: black;[m
+[32m+[m[32m  font-size: 11pt;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Formatação de interface*/[m
+[32m+[m[32mdiv#interface {[m
+[32m+[m[32m  width: 900px;[m
+[32m+[m[32m  background-color: white;[m
+[32m+[m[32m  margin: -20px auto 0px auto;[m
+[32m+[m[32m  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);[m
+[32m+[m[32m  padding: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader#cabecalho img {[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  left: 780px;[m
+[32m+[m[32m  top: 40px;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader#cabecalho {[m
+[32m+[m[32m  border-bottom: 1px #606060 solid;[m
+[32m+[m[32m  height: 150px;[m
+[32m+[m[32m  background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader#cabecalho h1 {[m
+[32m+[m[32m  font-family: "fontlogo", Helvetica, sans-serif;[m
+[32m+[m[32m  font-size: 30pt;[m
+[32m+[m[32m  color: #606060;[m
+[32m+[m[32m  text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);[m
+[32m+[m[32m  padding: 0px;[m
+[32m+[m[32m  margin-bottom: 0px;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader#cabecalho h2 {[m
+[32m+[m[32m  font-family: "Titillium Web", sans-serif;[m
+[32m+[m[32m  color: #888888;[m
+[32m+[m[32m  padding: 0px;[m
+[32m+[m[32m  margin-top: 0px;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Formatação de imagens com legendas[m
+[32m+[m[32mbox shadow: cria uma borda ao redor do objeto*/[m
+[32m+[m[32mfigure.foto-legenda {[m
+[32m+[m[32m  position: relative;[m
+[32m+[m[32m  border: 8px solid white;[m
+[32m+[m[32m  box-shadow: 1px 1px 4px black;[m
+[32m+[m[32m}[m
+[32m+[m[32mfigure.foto-legenda img {[m
+[32m+[m[32m  width: 100%;[m
+[32m+[m[32m  height: 100%;[m
+[32m+[m[32m}[m
+[32m+[m[32mfigure.foto-legenda figcaption {[m
+[32m+[m[32m  opacity: 0;[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  top: 0px;[m
+[32m+[m[32m  background-color: rgba(0, 0, 0, 0.4);[m
+[32m+[m[32m  color: white;[m
+[32m+[m[32m  width: 100%;[m
+[32m+[m[32m  height: 100%;[m
+[32m+[m[32m  padding: 10px;[m
+[32m+[m[32m  box-sizing: border-box;[m
+[32m+[m[32m  transition: opacity 1s;[m
+[32m+[m[32m}[m
+[32m+[m[32mfigure.foto-legenda:hover figcaption {[m
+[32m+[m[32m  opacity: 1;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Formatação do menu*/[m
+[32m+[m[32m/* fazer o menu ficar na posicao correta */[m
+[32m+[m[32mnav#menu {[m
+[32m+[m[32m  display: block;[m
+[32m+[m[32m}[m
+[32m+[m[32m/* FOMATACÃO DO MENU caxinhas de clicar*/[m
+[32m+[m[32mnav#menu ul {[m
+[32m+[m[32m  list-style: none;[m
+[32m+[m[32m  text-transform: uppercase;[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  top: -20px;[m
+[32m+[m[32m  left: 300px;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Transition 1s demora 1s para fazer a transição de uma cor para a outra*/[m
+[32m+[m[32m/* FOMATACÃO DO MENU para ficar em cima do site na horizontal*/[m
+[32m+[m[32mnav#menu li {[m
+[32m+[m[32m  display: inline-block;[m
+[32m+[m[32m  background-color: #dddd;[m
+[32m+[m[32m  padding: 10px;[m
+[32m+[m[32m  margin: 2px;[m
+[32m+[m[32m  transition: background-color 1s;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*Efeito quando passar o mouse em cima do menu*/[m
+[32m+[m[32mnav#menu li:hover {[m
+[32m+[m[32m  background-color: #606060;[m
+[32m+[m[32m}[m
+[32m+[m[32m/* ESCONDER O H1 DO MENU*/[m
+[32m+[m[32mnav#menu h1 {[m
+[32m+[m[32m  display: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m/*text decoration retira o subilinhado dos links[m
+[32m+[m[32mAqui selecionou a cor do nome para preto tbm*/[m
+[32m+[m[32mnav#menu a {[m
+[32m+[m[32m  color: black;[m
+[32m+[m[32m  text-decoration: none;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/*Mudar a cor da letra quando passa o mouse no menu*/[m
+[32m+[m[32mnav#menu a:hover {[m
+[32m+[m[32m  color: white;[m
+[32m+[m[32m  text-decoration: underline;[m
+[32m+[m[32m}[m
+[32m+[m[32msection#corpo {[m
+[32m+[m[32m  display: block;[m
+[32m+[m[32m  width: 500px;[m
+[32m+[m[32m  float: left;[m
+[32m+[m[32m  border-right: 1px solid #606060;[m
+[32m+[m[32m  padding-right: 15px;[m
+[32m+[m[32m}[m
+[32m+[m[32marticle#noticia-principal h2 {[m
+[32m+[m[32m  font-size: 12pt;[m
+[32m+[m[32m  color: #606060;[m
+[32m+[m[32m  background-color: #dddddd;[m
+[32m+[m[32m  padding: 5px 0px 5px 10px;[m
+[32m+[m[32m  margin: 10px 0px 10px 0px;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader#cabecalho-artigo h1 {[m
+[32m+[m[32m  font-family: "fontlogo", sans-serif;[m
+[32m+[m[32m  font-size: 20pt;[m
+[32m+[m[32m  color: #606060;[m
+[32m+[m[32m  margin-bottom: 0%;[m
+[32m+[m[32m  margin-top: 0%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mheader#cabecalho-artigo h2 {[m
+[32m+[m[32m  font-size: 13pt;[m
+[32m+[m[32m  color: #cecece;[m
+[32m+[m[32m  background-color: #ffffff;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mheader#cabecalho-artigo h3 {[m
+[32m+[m[32m  font-size: 12px;[m
+[32m+[m[32m  color: #606060;[m
+[32m+[m[32m}[m
+[32m+[m[32m.direita {[m
+[32m+[m[32m  text-align: right;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec {[m
+[32m+[m[32m  border: 1px solid #606060;[m
+[32m+[m[32m  border-spacing: 0;[m
+[32m+[m[32m  margin-left: auto;[m
+[32m+[m[32m  margin-right: auto;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec td {[m
+[32m+[m[32m  border: 1px solid #606060;[m
+[32m+[m[32m  padding: 10px;[m
+[32m+[m[32m  text-align: center;[m
+[32m+[m[32m  vertical-align: middle;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec td.ce {[m
+[32m+[m[32m  color: white;[m
+[32m+[m[32m  background-color: #606060;[m
+[32m+[m[32m  vertical-align: top;[m
+[32m+[m[32m  font-weight: bold;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec td.cd {[m
+[32m+[m[32m  background-color: #cecece;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec caption {[m
+[32m+[m[32m  color: #888888;[m
+[32m+[m[32m  font-size: 13pt;[m
+[32m+[m[32m  font-weight: bolder;[m
+[32m+[m[32m}[m
+[32m+[m[32mtable#tabelaspec caption span {[m
+[32m+[m[32m  display: block;[m
+[32m+[m[32m  float: right;[m
+[32m+[m[32m  color: #000000;[m
+[32m+[m[32m  font-size: 8pt;[m
+[32m+[m[32m  margin-top: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32maside#lateral {[m
+[32m+[m[32m  display: block;[m
+[32m+[m[32m  width: 350px;[m
+[32m+[m[32m  float: right;[m
+[32m+[m[32m  background-color: #dddddd;[m
+[32m+[m[32m  padding: 10px;[m
+[32m+[m[32m  margin-top: 10;[m
+[32m+[m[32m  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);[m
+[32m+[m[32m}[m
+[32m+[m[32maside#lateral h1 {[m
+[32m+[m[32m  font-family: "fontlogo", sans-serif;[m
+[32m+[m[32m  font-size: 20pt;[m
+[32m+[m[32m  color: #606060;[m
+[32m+[m[32m  margin-top: 0px;[m
+[32m+[m[32m}[m
+[32m+[m[32maside#lateral h2 {[m
+[32m+[m[32m  background-color: #606060;[m
+[32m+[m[32m  font-size: 11pt;[m
+[32m+[m[32m  color: white;[m
+[32m+[m[32m  padding: 5px;[m
+[32m+[m[32m}[m
+[32m+[m[32mfooter#rodape {[m
+[32m+[m[32m  clear: both;[m
+[32m+[m[32m  border-top: 1px solid #606060;[m
+[32m+[m[32m}[m
+[32m+[m[32mfooter#rodape p {[m
+[32m+[m[32m  text-align: center;[m
+[32m+[m[32m}[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/form.css b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/form.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/fotos.css b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/fotos.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/media.css b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/media.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/specs.css b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_css/specs.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/bubblegum-sans-regular.otf b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/bubblegum-sans-regular.otf[m
+[1mnew file mode 100644[m
+[1mindex 0000000..60fa25f[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/bubblegum-sans-regular.otf differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/computer-font.ttf b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/computer-font.ttf[m
+[1mnew file mode 100644[m
+[1mindex 0000000..49f1c62[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_fonts/computer-font.ttf differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/.DS_Store b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5008ddf[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/audio.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/audio.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c246f35[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/audio.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/botao-enviar.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/botao-enviar.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e3e56db[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/botao-enviar.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/contato.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/contato.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5680e91[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/contato.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-bateria.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-bateria.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06ee5f2[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-bateria.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-camera.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-camera.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..28e3ed0[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-camera.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-tela.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-tela.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..09bb319[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-tela.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-touch.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-touch.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e49c5dc[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/det-touch.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes-02.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes-02.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..806432f[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes-02.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..143b686[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/especificacoes.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/facebook.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/facebook.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f90397c[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/facebook.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/fotos.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/fotos.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..215df1a[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/fotos.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-01.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-01.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..15e2050[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-01.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-02.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-02.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..24604a8[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-02.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-03.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-03.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9282fdb[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-03.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-04.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-04.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..220a935[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-04.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-05.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-05.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..333e449[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-05.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-06.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-06.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..576a24e[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/galeria-06.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema-marcado.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema-marcado.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e44d0de[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema-marcado.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..15d46e6[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-esquema.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-grd b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-grd[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e2ceeeb[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-grd differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-med.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-med.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..25bd81c[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-med.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-peq.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-peq.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..758b6b7[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-logo-peq.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-gig.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-gig.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fce1666[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-gig.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-grd.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-grd.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0dfa6d3[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-grd.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-med.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-med.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ab7643b[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-med.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-peq.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-peq.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b2acfa8[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-oculos-preto-peq.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem-mulher.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem-mulher.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..21a3858[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem-mulher.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..db54044[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-homem.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-mulher.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-mulher.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..63285e5[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/glass-quadro-mulher.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/home.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/home.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..42c7c6a[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/home.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-contato.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-contato.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a27eeab[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-contato.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-endereco.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-endereco.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4b23c6c[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-endereco.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-mensagem.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-mensagem.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..541437e[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-mensagem.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-pagamento.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-pagamento.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0fc4134[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/icone-pagamento.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/jornal.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/jornal.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a7fdeb9[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/jornal.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-acesa.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-acesa.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e65e77c[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-acesa.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-apagada.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-apagada.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5bd7f93[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-apagada.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-quebrada.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-quebrada.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..533cc6d[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/lampada-quebrada.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/logo-google-gig.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/logo-google-gig.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2ba5654[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/logo-google-gig.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/mao.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/mao.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..328a995[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/mao.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/multimidia.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/multimidia.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1bb1c63[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/multimidia.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/radio-tv.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/radio-tv.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1728ba9[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/radio-tv.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/twitter.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/twitter.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f1f64a1[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/twitter.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini01.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini01.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4dd1091[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini01.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini02.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini02.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6795af2[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini02.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini03.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini03.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..abc85c8[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video-mini03.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video.png b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3bd6015[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_imagens/video.png differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/00-divisoes-semanticas.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/00-divisoes-semanticas.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d2ef708[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/00-divisoes-semanticas.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/01-index.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/01-index.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6a42ba4[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/01-index.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/02-specs.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/02-specs.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0fa8fbb[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/02-specs.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/03-fotos.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/03-fotos.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..42a3dc5[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/03-fotos.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/04-multimidia.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/04-multimidia.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6f2fd75[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/04-multimidia.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/05-fale-conosco.jpg b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/05-fale-conosco.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..72066b8[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_interface/05-fale-conosco.jpg differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/.DS_Store b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5008ddf[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TestHoraeDataJS.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TestHoraeDataJS.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0ca582a[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TestHoraeDataJS.html[m	
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <title>TesteJS</title>[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <h1>Testando Javascript</h1>[m
+[32m+[m[32m    <script>[m
+[32m+[m[32m      document.write("Olá,Hoje é dia " + Date());[m
+[32m+[m[32m    </script>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/Teste Lampada Javascript.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/Teste Lampada Javascript.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..49c5434[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/Teste Lampada Javascript.html[m	
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <title>Teste JavaScript</title>[m
+[32m+[m[32m    <script>[m
+[32m+[m[32m      function acendeLampada() {[m
+[32m+[m[32m        document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";[m
+[32m+[m[32m      }[m
+[32m+[m[32m      function apagaLampada() {[m
+[32m+[m[32m        document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";[m
+[32m+[m[32m      }[m
+[32m+[m[32m      function quebraLampada() {[m
+[32m+[m[32m        document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";[m
+[32m+[m[32m      }[m
+[32m+[m[32m    </script>[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <h1>Acenda a Lâmpada</h1>[m
+[32m+[m[32m    <img[m
+[32m+[m[32m      src="_imagens/lampada-apagada.jpg"[m
+[32m+[m[32m      id="luz"[m
+[32m+[m[32m      onmousemove="acendeLampada()"[m
+[32m+[m[32m      onmouseout="apagaLampada()"[m
+[32m+[m[32m      onclick="quebraLampada()"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TesteLampadaJS-3.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TesteLampadaJS-3.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..14ed709[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/TesteLampadaJS-3.html[m	
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <title>Teste JavaScript</title>[m
+[32m+[m[32m    <script>[m
+[32m+[m[32m      var quebrada = false;[m
+[32m+[m[32m      function mudaLampada(tipo) {[m
+[32m+[m[32m        if (!quebrada) {[m
+[32m+[m[32m          document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        if (tipo == "lampada-quebrada") {[m
+[32m+[m[32m          quebrada = true;[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    </script>[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <h1>Acenda a Lâmpada</h1>[m
+[32m+[m[32m    <img[m
+[32m+[m[32m      src="_imagens/lampada-apagada.jpg"[m
+[32m+[m[32m      id="luz"[m
+[32m+[m[32m      onmousemove="mudaLampada('lampada-acesa')"[m
+[32m+[m[32m      onmouseout="mudaLampada('lampada-apagada')"[m
+[32m+[m[32m      onclick="mudaLampada('lampada-quebrada')"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/audio.js b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/audio.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/funcoes.js b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/funcoes.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8b35fcd[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_javascript/funcoes.js[m	
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mfunction mudaFoto(foto) {[m
+[32m+[m[32m  document.getElementById("icone").src = foto;[m
+[32m+[m[32m}[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/.DS_Store b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..448c196[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fale-conosco-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fale-conosco-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6409ed6[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fale-conosco-txt.html[m	
+[36m@@ -0,0 +1,47 @@[m
+[32m+[m[32mGoogle Glass[m
+[32m+[m[32mA revolução do Google está chegando[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mMenu Principal[m
+[32m+[m[32m- Home[m
+[32m+[m[32m- Especificações[m
+[32m+[m[32m- Fotos[m
+[32m+[m[32m- Multimídia[m
+[32m+[m[32m- Fale conosco[m
+[32m+[m
+[32m+[m[32mFale Conosco > Contato[m
+[32m+[m[32mFormulário de Contato[m
+[32m+[m[32mpor Gustavo Guanabara[m
+[32m+[m[32mAtualizado em 01/Maio/2013[m
+[32m+[m
+[32m+[m[32mIdentificação do Usuário[m
+[32m+[m[32m    Nome:[m
+[32m+[m[32m    Senha:[m
+[32m+[m[32m    E-mail:[m
+[32m+[m[32m    Sexo:[m
+[32m+[m[32m        - Masculino[m
+[32m+[m[32m        - Feminino[m
+[32m+[m[32m    Data de Nascimento:[m
+[32m+[m
+[32m+[m[32mEndereço do Usuário[m
+[32m+[m[32m    Logradouro:[m
+[32m+[m[32m    Número:[m
+[32m+[m[32m    Estado:[m
+[32m+[m[32m    Cidade:[m
+[32m+[m
+[32m+[m[32mMensagem do Usuário[m
+[32m+[m[32m    Grau de Urgência:[m
+[32m+[m[32m    Mensagem:[m
+[32m+[m
+[32m+[m[32mQuero um Google Glass[m
+[32m+[m[32m    Gostaria de adquirir um Google Glass quando disponível[m
+[32m+[m[32m    Cor:[m
+[32m+[m[32m    Quantidade:[m
+[32m+[m[32m    Preço Total: R$[m
+[32m+[m
+[32m+[m
+[32m+[m[32m[BOTÃO ENVIAR][m
+[32m+[m
+[32m+[m[32mCopyright 2013 - by Thiago Antonio[m
+[32m+[m[32mFacebook | Twitter[m
+\ No newline at end of file[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fotos-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fotos-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..68e1d70[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/fotos-txt.html[m	
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32mGoogle Glass[m
+[32m+[m[32mA revolução do Google está chegando[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mMenu Principal[m
+[32m+[m[32m- Home[m
+[32m+[m[32m- Especificações[m
+[32m+[m[32m- Fotos[m
+[32m+[m[32m- Multimídia[m
+[32m+[m[32m- Fale conosco[m
+[32m+[m
+[32m+[m[32mGlass > Fotos[m
+[32m+[m[32mGaleria de Imagens do Google Glass[m
+[32m+[m[32mpor Gustavo Guanabara[m
+[32m+[m[32mAtualizado em 01/Maio/2013[m
+[32m+[m
+[32m+[m[32mVeja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.[m
+[32m+[m
+[32m+[m[32m- Agenda e lembretes[m
+[32m+[m[32m- Sergey Brin usando o Glass[m
+[32m+[m[32m- Leve e compacto[m
+[32m+[m[32m- Sensação de uma tela de 50"[m
+[32m+[m[32m- Vários tipos de lente[m
+[32m+[m[32m- Informações importantes[m
+[32m+[m
+[32m+[m[32mCopyright 2013 - by Thiago Antonio[m
+[32m+[m
+[32m+[m[32mFacebook | Twitter[m
+\ No newline at end of file[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/google-glass-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/google-glass-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..29272c2[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/google-glass-txt.html[m	
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32mClique sobre as áreas destacadas em vermelho[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mTela[m
+[32m+[m[32mComo o mundo vai aparecer[m
+[32m+[m[32mDe acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mCâmera[m
+[32m+[m[32mFilme e fotografe a qualquer momento[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m[32mCom o Google Glass será possível tirar fotos com até 5 megapixels e gravar vídeos com 720 linhas de resolução. Os primeiros vídeos e fotos capturados com o aparelho já começaram a circular pela rede, mas até agora ninguém tem muitas informações técnicas.[m
+[32m+[m
+[32m+[m[32mSensores[m
+[32m+[m[32mA sensibilidade de um simples óculos<[m
+[32m+[m[32mQuem pensa que para comandar o Google Glass vai precisar de teclado e mouse, se engana redondamente. O dispositivo vem com vários tipos de sensores e microfones embutidos. Assim, para dar um comando, basta falar ou passar o dedo na lateral do óculos.[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mBateria e Gadgets[m
+[32m+[m[32mQuais são os dispositivos que complementam o Glass[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m[32mSegundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/index-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/index-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e4b1fb8[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/index-txt.html[m	
+[36m@@ -0,0 +1,53 @@[m
+[32m+[m[32mGoogle Glass[m
+[32m+[m[32mA revolução do Google está chegando[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mMenu Principal[m
+[32m+[m[32m- Home[m
+[32m+[m[32m- Especificações[m
+[32m+[m[32m- Fotos[m
+[32m+[m[32m- Multimídia[m
+[32m+[m[32m- Fale conosco[m
+[32m+[m
+[32m+[m[32mTecnologia > Inovações[m
+[32m+[m[32mSaiba tudo sobre o Google Glass[m
+[32m+[m[32mpor Gustavo Guanabara[m
+[32m+[m[32mAtualizado em 23/Abril/2013[m
+[32m+[m
+[32m+[m[32mO que é[m
+[32m+[m[32mO Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de Project Glass, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mData de lançamento[m
+[32m+[m[32mNão há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.[m
+[32m+[m
+[32m+[m[32mEspecificações Técnicas[m
+[32m+[m[32mTabela Técnica do Google Glass Mar/2013[m
+[32m+[m
+[32m+[m[32mTela:Resolução equivalente a tela de 25"[m
+[32m+[m[32mCamera: 5MP para fotos / 720p para vídeos[m
+[32m+[m[32mConectividade: Wi-Fi/ Bluetooth[m
+[32m+[m[32mMemória Interna: 12GB[m
+[32m+[m
+[32m+[m[32mComo funciona[m
+[32m+[m[32mDe acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça[m
+[32m+[m
+[32m+[m[32mO que você pode fazer com o Google Glasses[m
+[32m+[m[32mO vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UM VÍDEO][m
+[32m+[m
+[32m+[m[32mOutras Notícias[m
+[32m+[m[32mVídeo mais recente[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UM VÍDEO][m
+[32m+[m
+[32m+[m[32mNovidades no Glass[m
+[32m+[m[32mO Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.[m
+[32m+[m
+[32m+[m[32mAlém da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.[m
+[32m+[m
+[32m+[m[32mCopyright 2013 - by Thiago Antonio[m
+[32m+[m[32mFacebook | Twitter[m
+\ No newline at end of file[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/multimidia-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/multimidia-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8014608[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/multimidia-txt.html[m	
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mGoogle Glass[m
+[32m+[m[32mA revolução do Google está chegando[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mMenu Principal[m
+[32m+[m[32m- Home[m
+[32m+[m[32m- Especificações[m
+[32m+[m[32m- Fotos[m
+[32m+[m[32m- Multimídia[m
+[32m+[m[32m- Fale conosco[m
+[32m+[m
+[32m+[m[32mGlass > Multimídia[m
+[32m+[m[32mSons e Vídeos[m
+[32m+[m[32mpor Gustavo Guanabara[m
+[32m+[m[32mAtualizado em 01/Maio/2013[m
+[32m+[m
+[32m+[m
+[32m+[m[32mÁudio e Vídeo[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UM VÍDEO][m
+[32m+[m[32m[AQUI ENTRA UM ÁUDIO][m
+[32m+[m
+[32m+[m[32mCopyright 2013 - by Thiago Antonio[m
+[32m+[m[32mFacebook | Twitter[m
+\ No newline at end of file[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/specs-txt.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/specs-txt.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5f19074[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/_textos/specs-txt.html[m	
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32mGoogle Glass[m
+[32m+[m[32mA revolução do Google está chegando[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA FOTO][m
+[32m+[m
+[32m+[m[32mMenu Principal[m
+[32m+[m[32m- Home[m
+[32m+[m[32m- Especificações[m
+[32m+[m[32m- Fotos[m
+[32m+[m[32m- Multimídia[m
+[32m+[m[32m- Fale conosco[m
+[32m+[m
+[32m+[m[32mGlass > Especificações[m
+[32m+[m[32mRaio-X no Google Glass[m
+[32m+[m[32mpor Gustavo Guanabara[m
+[32m+[m[32mAtualizado em 01/Maio/2013[m
+[32m+[m
+[32m+[m[32mClique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.[m
+[32m+[m
+[32m+[m[32m[AQUI ENTRA UMA IMAGEM][m
+[32m+[m
+[32m+[m[32mCopyright 2013 - by Thiago Antonio[m
+[32m+[m[32mFacebook | Twitter[m
+\ No newline at end of file[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fale-conosco.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fale-conosco.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8438b44[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fale-conosco.html[m	
+[36m@@ -0,0 +1,76 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>Tudo sobre google glass</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="_css/estilo.css" />[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <script src="_javascript/funcoes.js"></script>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="interface">[m
+[32m+[m[32m      <header id="cabecalho">[m
+[32m+[m[32m        <hgroup>[m
+[32m+[m[32m          <h1>Google Glass</h1>[m
+[32m+[m[32m          <h2>A revolução do Google está chegando</h2>[m
+[32m+[m[32m        </hgroup>[m
+[32m+[m[32m        <img id="icone" src="_imagens/contato.png" />[m
+[32m+[m
+[32m+[m[32m        <nav id="menu">[m
+[32m+[m[32m          <h1>Menu Principal</h1>[m
+[32m+[m[32m          <ul type="circle">[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/home.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="specs.html">Especificações</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fotos.html">Fotos</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="multimidia.html">Multimídia</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fale-conosco.html">Fale conosco</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m      </header>[m
+[32m+[m
+[32m+[m[32m      Fale Conosco > Contato Formulário de Contato por Gustavo Guanabara[m
+[32m+[m[32m      Atualizado em 01/Maio/2013 Identificação do Usuário Nome: Senha: E-mail:[m
+[32m+[m[32m      Sexo: - Masculino - Feminino Data de Nascimento: Endereço do Usuário[m
+[32m+[m[32m      Logradouro: Número: Estado: Cidade: Mensagem do Usuário Grau de Urgência:[m
+[32m+[m[32m      Mensagem: Quero um Google Glass Gostaria de adquirir um Google Glass[m
+[32m+[m[32m      quando disponível Cor: Quantidade: Preço Total: R$ [BOTÃO ENVIAR][m
+[32m+[m[32m      <footer id="rodape">[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Copyright 2013 - by Thiago Antonio <br />[m
+[32m+[m[32m          <a href="http://facebook.com">Facebook</a> | Twitter[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fotos.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fotos.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8ff8eda[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/fotos.html[m	
+[36m@@ -0,0 +1,78 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>Tudo sobre google glass</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="_css/estilo.css" />[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <script src="_javascript/funcoes.js"></script>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="interface">[m
+[32m+[m[32m      <header id="cabecalho">[m
+[32m+[m[32m        <hgroup>[m
+[32m+[m[32m          <h1>Google Glass</h1>[m
+[32m+[m[32m          <h2>A revolução do Google está chegando</h2>[m
+[32m+[m[32m        </hgroup>[m
+[32m+[m[32m        <img id="icone" src="_imagens/fotos.png" />[m
+[32m+[m
+[32m+[m[32m        <nav id="menu">[m
+[32m+[m[32m          <h1>Menu Principal</h1>[m
+[32m+[m[32m          <ul type="circle">[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/home.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="specs.html">Especificações</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fotos.html">Fotos</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="multimidia.html">Multimídia</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fale-conosco.html">Fale conosco</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m      </header>[m
+[32m+[m
+[32m+[m[32m      Glass > Fotos Galeria de Imagens do Google Glass por Gustavo Guanabara[m
+[32m+[m[32m      Atualizado em 01/Maio/2013 Veja na nossa galeria de fotos várias belas[m
+[32m+[m[32m      imagens que mostram algumas das principais características do Google[m
+[32m+[m[32m      Glass, como recursos e propriedades que estão impressionando o mundo[m
+[32m+[m[32m      inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão[m
+[32m+[m[32m      ampliada e com uma breve descrição. - Agenda e lembretes - Sergey Brin[m
+[32m+[m[32m      usando o Glass - Leve e compacto - Sensação de uma tela de 50" - Vários[m
+[32m+[m[32m      tipos de lente - Informações importantes[m
+[32m+[m[32m      <footer id="rodape">[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Copyright 2013 - by Thiago Antonio <br />[m
+[32m+[m[32m          <a href="http://facebook.com">Facebook</a> | Twitter[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/google-glass.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/google-glass.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b548564[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/google-glass.html[m	
+[36m@@ -0,0 +1,101 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>informacoes sobre o google glass</title>[m
+[32m+[m[32m    <style>[m
+[32m+[m[32m      body {[m
+[32m+[m[32m        font-family: Arial, Helvetica, sans-serif;[m
+[32m+[m[32m        font-size: 10pt;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      p {[m
+[32m+[m[32m        text-align: justify;[m
+[32m+[m[32m        text-indent: 20px;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      article h1 {[m
+[32m+[m[32m        font-size: 15pt;[m
+[32m+[m[32m        color: white;[m
+[32m+[m[32m        background-color: rgba(0, 0, 0, 0.3);[m
+[32m+[m[32m        padding: 5px;[m
+[32m+[m[32m        margin: 0px;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      article h2 {[m
+[32m+[m[32m        font-size: 13pt;[m
+[32m+[m[32m        color: #8888;[m
+[32m+[m[32m        margin: 0px;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      article {[m
+[32m+[m[32m        margin-bottom: 800px;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      img.img-dir {[m
+[32m+[m[32m        display: block;[m
+[32m+[m[32m        float: right;[m
+[32m+[m[32m        margin-left: 5px;[m
+[32m+[m[32m      }[m
+[32m+[m[32m    </style>[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <article id="topo">[m
+[32m+[m[32m      <header><h2>Clique sobre as áreas destacadas em vermelho</h2></header>[m
+[32m+[m[32m      <img src="_imagens/mao.png" alt="mão apontando para a esquerda" />[m
+[32m+[m[32m    </article>[m
+[32m+[m
+[32m+[m[32m    <article id="tela">[m
+[32m+[m[32m      <header>[m
+[32m+[m[32m        <h1>Tela</h1>[m
+[32m+[m[32m        <h2>Como o mundo vai aparecer</h2>[m
+[32m+[m[32m      </header>[m
+[32m+[m[32m      <p>[m
+[32m+[m[32m        De acordo com fontes próximas do Google, os óculos vão contar com uma[m
+[32m+[m[32m        pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do[m
+[32m+[m[32m        usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como[m
+[32m+[m[32m        selecionar opções com o movimento da cabeça.[m
+[32m+[m[32m      </p>[m
+[32m+[m[32m      <img src="_imagens/det-tela.jpg" alt="tela do google glass" />[m
+[32m+[m[32m    </article>[m
+[32m+[m
+[32m+[m[32m    <article id="camera">[m
+[32m+[m[32m      <header>[m
+[32m+[m[32m        <h1>Câmera</h1>[m
+[32m+[m[32m        <h2>Filme e fotografe a qualquer momento</h2>[m
+[32m+[m[32m      </header>[m
+[32m+[m[32m      <img src="_imagens/det-camera.jpg" class="img-dir" alt="camera" />[m
+[32m+[m[32m      <p>[m
+[32m+[m[32m        Com o Google Glass será possível tirar fotos com até 5 megapixels e[m
+[32m+[m[32m        gravar vídeos com 720 linhas de resolução. Os primeiros vídeos e fotos[m
+[32m+[m[32m        capturados com o aparelho já começaram a circular pela rede, mas até[m
+[32m+[m[32m        agora ninguém tem muitas informações técnicas.[m
+[32m+[m[32m      </p>[m
+[32m+[m[32m    </article>[m
+[32m+[m
+[32m+[m[32m    <article id="sensores">[m
+[32m+[m[32m      <header>[m
+[32m+[m[32m        <h1>Sensores</h1>[m
+[32m+[m[32m        <h2>A sensibilidade de um simples óculos</h2>[m
+[32m+[m[32m      </header>[m
+[32m+[m[32m      <p>[m
+[32m+[m[32m        Quem pensa que para comandar o Google Glass vai precisar de teclado e[m
+[32m+[m[32m        mouse, se engana redondamente. O dispositivo vem com vários tipos de[m
+[32m+[m[32m        sensores e microfones embutidos. Assim, para dar um comando, basta falar[m
+[32m+[m[32m        ou passar o dedo na lateral do óculos.[m
+[32m+[m[32m      </p>[m
+[32m+[m[32m      <img src="_imagens/det-touch.jpg" alt="touch" />[m
+[32m+[m[32m    </article>[m
+[32m+[m
+[32m+[m[32m    <article id="gadgets">[m
+[32m+[m[32m      <header>[m
+[32m+[m[32m        <h1>Bateria e Gadgets</h1>[m
+[32m+[m[32m        <h2>Quais são os dispositivos que complementam o Glass</h2>[m
+[32m+[m[32m      </header>[m
+[32m+[m[32m      <img src="_imagens/det-bateria.jpg" class="img-dir" alt="bateria" />[m
+[32m+[m[32m      <p>[m
+[32m+[m[32m        Segundo a própria Google, o Glass virá com uma bateria que tem autonomia[m
+[32m+[m[32m        suficiente para durar um dia inteiro. Apenas algumas atividades como[m
+[32m+[m[32m        videoconferências e longas filmagens vão exigir um pouco mais. Além[m
+[32m+[m[32m        disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.[m
+[32m+[m[32m      </p>[m
+[32m+[m[32m    </article>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/index.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dea1c26[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/index.html[m	
+[36m@@ -0,0 +1,186 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>Tudo sobre google glass</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="_css/estilo.css" />[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <script src="_javascript/funcoes.js"></script>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="interface">[m
+[32m+[m[32m      <header id="cabecalho">[m
+[32m+[m[32m        <hgroup>[m
+[32m+[m[32m          <h1>Google Glass</h1>[m
+[32m+[m[32m          <h2>A revolução do Google está chegando</h2>[m
+[32m+[m[32m        </hgroup>[m
+[32m+[m[32m        <img id="icone" src="_imagens/glass-oculos-preto-peq.png" />[m
+[32m+[m
+[32m+[m[32m        <nav id="menu">[m
+[32m+[m[32m          <h1>Menu Principal</h1>[m
+[32m+[m[32m          <ul type="circle">[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/home.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="specs.html">Especificações</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fotos.html">Fotos</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="multimidia.html">Multimídia</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fale-conosco.html">Fale conosco</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m      </header>[m
+[32m+[m[32m      <section id="corpo">[m
+[32m+[m[32m        <article id="noticia-principal">[m
+[32m+[m[32m          <header id="cabecalho-artigo">[m
+[32m+[m[32m            <hgroup>[m
+[32m+[m[32m              <h3>Tecnologia > &nbsp; Inovações</h3>[m
+[32m+[m[32m              <h1>Saiba tudo sobre o Google Glass</h1>[m
+[32m+[m[32m              <h2>por Thiago Antonio</h2>[m
+[32m+[m[32m              <h3 class="direita">Atualizado em 16/Novembro/2013</h3>[m
+[32m+[m[32m            </hgroup>[m
+[32m+[m[32m          </header>[m
+[32m+[m[32m          <h2>O que é</h2>[m
+[32m+[m
+[32m+[m[32m          <p>[m
+[32m+[m[32m            O <span style="font-weight: 100;">Google Glass</span> é um acessório[m
+[32m+[m[32m            em forma de óculos que possibilita a interação dos usuários com[m
+[32m+[m[32m            diversos conteúdos em realidade aumentada. Também chamado de[m
+[32m+[m[32m            <a href="https://www.google.com/glass/start/" target="_blank"[m
+[32m+[m[32m              >Project Glass</a[m
+[32m+[m[32m            >, o eletrônico é capaz de tirar fotos a partir de comandos de voz,[m
+[32m+[m[32m            enviar mensagens instantâneas e realizar[m
+[32m+[m[32m            vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para[m
+[32m+[m[32m            2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass[m
+[32m+[m[32m            encontra-se em fase de testes e já possui um vídeo totalmente[m
+[32m+[m[32m            gravado com o dispositivo. Além disso, a companhia de buscas[m
+[32m+[m[32m            registrou novas patentes anti-furto e de desbloqueio de tela para o[m
+[32m+[m[32m            acessório.[m
+[32m+[m[32m          </p>[m
+[32m+[m[32m          <!--O &shy; foi usado na quebra de linha usando o hífem-->[m
+[32m+[m[32m          <figure class="foto-legenda">[m
+[32m+[m[32m            <img src="_imagens/glass-quadro-homem-mulher.jpg" />[m
+[32m+[m[32m            <figcaption>[m
+[32m+[m[32m              <h3>Google glass</h3>[m
+[32m+[m[32m              <p>Uma nova maneira de ver o mundo</p>[m
+[32m+[m[32m            </figcaption>[m
+[32m+[m[32m          </figure>[m
+[32m+[m[32m          <h2>Data de lançamento</h2>[m
+[32m+[m[32m          <p>[m
+[32m+[m[32m            Não há uma data específica e oficial para o dispositivo ser lançado,[m
+[32m+[m[32m            ainda. Pode ser que ele esteja disponível em demonstrações a partir[m
+[32m+[m[32m            de 2013, mas seu lançamento para as lojas fica para, pelo menos,[m
+[32m+[m[32m            2014.[m
+[32m+[m[32m          </p>[m
+[32m+[m
+[32m+[m[32m          <h2>Especificações Técnicas</h2>[m
+[32m+[m[32m          <table id="tabelaspec">[m
+[32m+[m[32m            <caption>[m
+[32m+[m[32m              Tabela Técnica do Google Glass[m
+[32m+[m[32m              <span>Mar/2013</span>[m
+[32m+[m[32m            </caption>[m
+[32m+[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td class="ce">Tela</td>[m
+[32m+[m[32m              <td class="cd">Resolução equivalente a tela de 25"</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td rowspan="2" class="ce">Camera</td>[m
+[32m+[m[32m              <td class="cd">5MP para fotos</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td class="cd">720p para vídeos</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td rowspan="2" class="ce">Conectividade</td>[m
+[32m+[m[32m              <td class="cd">Wi-Fi</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td class="cd">Bluetooth</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m            <tr>[m
+[32m+[m[32m              <td class="ce">Memória Interna</td>[m
+[32m+[m[32m              <td class="cd">12GB</td>[m
+[32m+[m[32m            </tr>[m
+[32m+[m[32m          </table>[m
+[32m+[m
+[32m+[m[32m          <h2>Como funciona</h2>[m
+[32m+[m[32m          <p>[m
+[32m+[m[32m            De acordo com fontes próximas do Google, os óculos vão contar com[m
+[32m+[m[32m            uma pequena tela de LCD ou AMOLED na parte superior e em frente aos[m
+[32m+[m[32m            olhos do usuário. Com o uso de uma câmera e GPS, você pode se[m
+[32m+[m[32m            situar, assim como selecionar opções com o movimento da cabeça.[m
+[32m+[m[32m          </p>[m
+[32m+[m
+[32m+[m[32m          <h2>O que você pode fazer com o Google Glasses</h2>[m
+[32m+[m
+[32m+[m[32m          <p>[m
+[32m+[m[32m            vídeo de divulgação do Google mostra que você pode se transformar em[m
+[32m+[m[32m            uma espécie de “super-<wbr />humano”, já que o aparelho pode indicar[m
+[32m+[m[32m            a quantos metros você está de seu destino, se o metrô está aberto ou[m
+[32m+[m[32m            fechado, mostrar o clima, agenda e até mesmo permitir que você[m
+[32m+[m[32m            marque encontros apenas com comandos de voz.[m
+[32m+[m[32m          </p>[m
+[32m+[m[32m          [AQUI ENTRA UM VÍDEO][m
+[32m+[m[32m        </article>[m
+[32m+[m[32m      </section>[m
+[32m+[m[32m      <aside id="lateral">[m
+[32m+[m[32m        <h1>Outras Notícias</h1>[m
+[32m+[m[32m        <h2>Vídeo mais recente</h2>[m
+[32m+[m
+[32m+[m[32m        [AQUI ENTRA UM VÍDEO][m
+[32m+[m
+[32m+[m[32m        <h2>Novidades no Glass</h2>[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          O Google enfim revelou as especificações completas do Google Glass, e[m
+[32m+[m[32m          com ele uma surpresa ainda inédita no mercado: a gigante das buscas[m
+[32m+[m[32m          usará um sistema de áudio baseado na transdução por condução. Através[m
+[32m+[m[32m          das hastes dos óculos, o som será transmitido para o ouvido do usuário[m
+[32m+[m[32m          por meio de microvibrações em determinados ossos de sua cabeça, sem[m
+[32m+[m[32m          usar nenhum tipo de alto-falante.[m
+[32m+[m[32m        </p>[m
+[32m+[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Além da surpresa do áudio, a tela montada a frente do olho do usuário[m
+[32m+[m[32m          também chamou atenção. Serão 640 x 360 pixels de resolução que, em[m
+[32m+[m[32m          proporção, equivaleria a um monitor de 25 polegadas de alta definição[m
+[32m+[m[32m          colocado a 2,5 metros de distância do espectador.[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </aside>[m
+[32m+[m[32m      <footer id="rodape">[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Copyright 2013 - by Thiago Antonio <br />[m
+[32m+[m[32m          <a href="http://facebook.com">Facebook</a> | Twitter[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/multimidia.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/multimidia.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..930cf36[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/multimidia.html[m	
+[36m@@ -0,0 +1,72 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>Tudo sobre google glass</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="_css/estilo.css" />[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <script src="_javascript/funcoes.js"></script>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="interface">[m
+[32m+[m[32m      <header id="cabecalho">[m
+[32m+[m[32m        <hgroup>[m
+[32m+[m[32m          <h1>Google Glass</h1>[m
+[32m+[m[32m          <h2>A revolução do Google está chegando</h2>[m
+[32m+[m[32m        </hgroup>[m
+[32m+[m[32m        <img id="icone" src="_imagens/multimidia.png" />[m
+[32m+[m
+[32m+[m[32m        <nav id="menu">[m
+[32m+[m[32m          <h1>Menu Principal</h1>[m
+[32m+[m[32m          <ul type="circle">[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/home.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="specs.html">Especificações</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fotos.html">Fotos</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="multimidia.html">Multimídia</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fale-conosco.html">Fale conosco</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m      </header>[m
+[32m+[m
+[32m+[m[32m      Glass > Multimídia Sons e Vídeos por Gustavo Guanabara Atualizado em[m
+[32m+[m[32m      01/Maio/2013 Áudio e Vídeo [AQUI ENTRA UM VÍDEO] [AQUI ENTRA UM ÁUDIO][m
+[32m+[m[32m      <footer id="rodape">[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Copyright 2013 - by Thiago Antonio <br />[m
+[32m+[m[32m          <a href="http://facebook.com">Facebook</a> | Twitter[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/specs.html b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/specs.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7c53f23[m
+[1m--- /dev/null[m
+[1m+++ b/Projeto Google Glass HTML5/Projeto Site Google Glass/projeto-glass-html5/specs.html[m	
+[36m@@ -0,0 +1,75 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="pt-br">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="ie=edge" />[m
+[32m+[m[32m    <title>Tudo sobre google glass</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="_css/estilo.css" />[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m    />[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <script src="_javascript/funcoes.js"></script>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="interface">[m
+[32m+[m[32m      <header id="cabecalho">[m
+[32m+[m[32m        <hgroup>[m
+[32m+[m[32m          <h1>Google Glass</h1>[m
+[32m+[m[32m          <h2>A revolução do Google está chegando</h2>[m
+[32m+[m[32m        </hgroup>[m
+[32m+[m[32m        <img id="icone" src="_imagens/especificacoes.png" />[m
+[32m+[m
+[32m+[m[32m        <nav id="menu">[m
+[32m+[m[32m          <h1>Menu Principal</h1>[m
+[32m+[m[32m          <ul type="circle">[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/home.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="specs.html">Especificações</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/fotos.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fotos.html">Fotos</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/multimidia.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="multimidia.html">Multimídia</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li[m
+[32m+[m[32m              onmouseover="mudaFoto('_imagens/contato.png')"[m
+[32m+[m[32m              onmouseout="mudaFoto('_imagens/especificacoes.png')"[m
+[32m+[m[32m            >[m
+[32m+[m[32m              <a href="fale-conosco.html">Fale conosco</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m      </header>[m
+[32m+[m
+[32m+[m[32m      Glass > Especificações Raio-X no Google Glass por Gustavo Guanabara[m
+[32m+[m[32m      Atualizado em 01/Maio/2013 Clique em qualquer área destacada da imagem[m
+[32m+[m[32m      para ter mais informações sobre os recursos do Google Glass. Qualquer[m
+[32m+[m[32m      ponto vermelho vai te levar a um lugar cheio de novas informações. [AQUI[m
+[32m+[m[32m      ENTRA UMA IMAGEM][m
+[32m+[m[32m      <footer id="rodape">[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          Copyright 2013 - by Thiago Antonio <br />[m
+[32m+[m[32m          <a href="http://facebook.com">Facebook</a> | Twitter[m
+[32m+[m[32m        </p>[m
+[32m+[m[32m      </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/Projeto Google Glass HTML5/html5-pacote02/_media/.DS_Store b/Projeto Google Glass HTML5/html5-pacote02/_media/.DS_Store[m
+[1mnew file mode 100644[m
+[1mindex 0000000..664062f[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/html5-pacote02/_media/.DS_Store differ
+[1mdiff --git a/Projeto Google Glass HTML5/html5-pacote02/_media/2009-lovers-carvings-bibio.mp3 b/Projeto Google Glass HTML5/html5-pacote02/_media/2009-lovers-carvings-bibio.mp3[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ff94b69[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/html5-pacote02/_media/2009-lovers-carvings-bibio.mp3 differ
+[1mdiff --git a/Projeto Google Glass HTML5/html5-pacote02/_media/getting-started.mp4 b/Projeto Google Glass HTML5/html5-pacote02/_media/getting-started.mp4[m
+[1mnew file mode 100644[m
+[1mindex 0000000..437ef69[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/html5-pacote02/_media/getting-started.mp4 differ
+[1mdiff --git a/Projeto Google Glass HTML5/html5-pacote02/_media/how-it-feels.mp4 b/Projeto Google Glass HTML5/html5-pacote02/_media/how-it-feels.mp4[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e7ab0b9[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/html5-pacote02/_media/how-it-feels.mp4 differ
+[1mdiff --git a/Projeto Google Glass HTML5/html5-pacote02/_media/one-day.mp4 b/Projeto Google Glass HTML5/html5-pacote02/_media/one-day.mp4[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f395516[m
+Binary files /dev/null and b/Projeto Google Glass HTML5/html5-pacote02/_media/one-day.mp4 differ
